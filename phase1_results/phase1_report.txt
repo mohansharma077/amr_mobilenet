@@ -1,0 +1,62 @@
+
+======================================================================
+BACTERIAL AST CLASSIFICATION - PHASE 1 RESULTS
+======================================================================
+
+DATASET INFORMATION
+-------------------
+Total cells extracted: 1000
+Resistant cells: 500
+Susceptible cells: 500
+
+DATA SPLIT
+----------
+Training samples: 640
+Validation samples: 160
+Test samples: 200
+
+MODEL ARCHITECTURE
+------------------
+Base: MobileNetV2 (pretrained on ImageNet)
+Input shape: (64, 64, 3)
+Total parameters: 2,422,210
+Trainable parameters: 164,226
+
+TRAINING CONFIGURATION
+----------------------
+Epochs: 10
+Batch size: 8
+Optimizer: Adam
+Initial learning rate: 0.001
+Loss function: Categorical crossentropy
+
+BEST RESULTS
+------------
+Best validation accuracy: 0.8375 (Epoch 2)
+Test accuracy: 0.7600 (76.00%)
+Test precision: 0.7600
+Test recall: 0.7600
+
+CONFUSION MATRIX
+----------------
+                    Predicted
+                Resistant  Susceptible
+Actual Resistant      80         20
+       Susceptible    28         72
+
+
+FILES GENERATED
+---------------
+- small_dataset.npz (processed cells)
+- best_model.h5 (trained model)
+- final_model.h5 (final model)
+- training_history.csv (training metrics)
+- sample_cells.png (example cells)
+- training_curves.png (training progress)
+- confusion_matrix.png (performance)
+- confidence_distribution.png (predictions)
+- example_predictions.png (visual examples)
+- phase1_report.txt (this report)
+
+======================================================================
+======================================================================

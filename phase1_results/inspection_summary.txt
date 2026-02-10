@@ -1,0 +1,5 @@
+DATASET INSPECTION SUMMARY
+==================================================
+Untreated image shape: (684, 420, 3)
+Treated image shape: (3, 684, 420)
+Mask shape: (684, 420)
