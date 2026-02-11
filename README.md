@@ -33,7 +33,6 @@ This project uses the **DASP (Deep Antimicrobial Susceptibility Phenotyping)** d
 ```bash
 # Clone repository
 git clone https://github.com/mohansharma077/amr_mobilenet.git
-cd bacterial-ast-classification
 
 # Create virtual environment
 python -m venv venv
@@ -43,26 +42,8 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Usage
-
-**Option 1: Jupyter Notebook (Recommended for beginners)**
-```bash
-jupyter notebook notebooks/phase1_pipeline.ipynb
-```
 
 
-
-## 📊 Results (Phase 1)
-
-
-
-
-
-### Sample Results
-
-![Training Curves](results/figures/training_curves.png)
-![Confusion Matrix](results/figures/confusion_matrix.png)
-![Example Predictions](results/figures/example_predictions.png)
 
 ## 🏗️ Architecture
 
@@ -83,7 +64,7 @@ base = MobileNetV2(weights='imagenet', include_top=False)
 x = GlobalAveragePooling2D()(base.output)
 x = Dense(128, activation='relu')(x)
 output = Dense(2, activation='softmax')(x)
-```
+
 
 ## 📈 Roadmap
 
@@ -109,15 +90,6 @@ output = Dense(2, activation='softmax')(x)
 
 ## 📝 Methodology
 
-### Key Differences from Original Paper
-
-| Aspect | Original Paper | This Implementation |
-|--------|---------------|---------------------|
-| **Dataset size** | ~30,000 cells | 1,000 cells (Phase 1) |
-| **Architecture** | DenseNet121 | MobileNetV2 (Phase 1) |
-| **Training time** | Not specified | 25 min (CPU) |
-| **Segmentation** | Mask R-CNN (trained) | Pre-computed masks |
-| **Hardware** | GPU | CPU (Phase 1) |
 
 ### Preprocessing Details
 ```python
@@ -141,45 +113,7 @@ def extract_cell(dapi_stack, nile_red_stack, mask):
 
 Contributions are welcome! Please:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-## 📚 Citation
-
-If you use this code in your research, please cite:
-```bibtex
-@article{zagajewski2023deep,
-  title={Deep learning and single-cell phenotyping for rapid antimicrobial susceptibility detection in Escherichia coli},
-  author={Zagajewski, Alexander and Turner, Piers and others},
-  journal={Communications Biology},
-  volume={6},
-  number={1},
-  pages={1164},
-  year={2023},
-  publisher={Nature Publishing Group}
-}
-
-@misc{mohansharma077,
-  title={Bacterial AST Classification: Implementation and Extension},
-  author={Mohan Sharma},
-  year={2026},
-  }
-}
-```
-
-## 🙏 Acknowledgments
-
-- Original paper authors: Zagajewski et al., 2023
-- DASP dataset providers
-- University of East London for computational resources
-- TensorFlow and Keras teams
 
 ## 📧 Contact
 
