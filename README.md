@@ -93,7 +93,7 @@ output = Dense(2, activation='softmax')(x)
 
 ### Preprocessing Details
 ```python
-# Example: Extract single cell
+# Extract single cell
 def extract_cell(dapi_stack, nile_red_stack, mask):
     # 1. Average 30 frames
     dapi_avg = np.mean(dapi_stack, axis=0)
