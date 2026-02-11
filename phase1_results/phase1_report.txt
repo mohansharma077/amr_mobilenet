@@ -32,21 +32,21 @@ Loss function: Categorical crossentropy
 
 BEST RESULTS
 ------------
-Best validation accuracy: 0.8375 (Epoch 2)
-Test accuracy: 0.7600 (76.00%)
-Test precision: 0.7600
-Test recall: 0.7600
+Best validation accuracy: 0.8313 (Epoch 5)
+Test accuracy: 0.7700 (77.00%)
+Test precision: 0.7700
+Test recall: 0.7700
 
 CONFUSION MATRIX
 ----------------
                     Predicted
                 Resistant  Susceptible
-Actual Resistant      80         20
-       Susceptible    28         72
+Actual Resistant      88         12
+       Susceptible    34         66
 
 
 FILES GENERATED
----------------
+---------------------------
 - small_dataset.npz (processed cells)
 - best_model.h5 (trained model)
 - final_model.h5 (final model)
