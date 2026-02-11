@@ -2,9 +2,7 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![TensorFlow 2.15](https://img.shields.io/badge/TensorFlow-2.15-orange.svg)](https://www.tensorflow.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Replication and extension of the paper: *"Deep learning and single-cell phenotyping for rapid antimicrobial susceptibility detection in Escherichia coli"* ([Zagajewski et al., 2023](https://doi.org/10.1038/s42003-023-05524-4))
 
 ## 🎯 Project Overview
 
@@ -14,8 +12,7 @@ This project implements a deep learning pipeline for rapid antimicrobial suscept
 - 🔬 Single-cell phenotyping using fluorescence microscopy
 - 🧠 Deep learning classification (MobileNetV2/DenseNet121)
 - ⚡ Rapid results (~30 minutes vs 18-24 hours)
-- 📊 Achieves ~75% accuracy on small dataset (Phase 1)
-- 🎯 Target: 80-84% accuracy on full dataset (Phase 2)
+
 
 ## 📂 Dataset
 
@@ -25,7 +22,7 @@ This project uses the **DASP (Deep Antimicrobial Susceptibility Phenotyping)** d
 - **Imaging:** Dual-channel fluorescence (DAPI for DNA, Nile Red for membrane)
 - **Resolution:** 30 frames per field of view
 
-> **Note:** Dataset not included in repository due to size. Contact  for access.
+> **Note:** Dataset not included in repository due to size. Contact  to access.
 
 
 
@@ -45,33 +42,14 @@ This project uses the **DASP (Deep Antimicrobial Susceptibility Phenotyping)** d
 - **Output:** Binary classification (Resistant/Susceptible)
 
 # Simplified architecture
+```
 base = MobileNetV2(weights='imagenet', include_top=False)
 x = GlobalAveragePooling2D()(base.output)
 x = Dense(128, activation='relu')(x)
 output = Dense(2, activation='softmax')(x)
+```
 
 
-## 📈 Roadmap
-
-### ✅ Phase 1 (Complete)
-- [x] Data inspection and preprocessing
-- [x] Extract 1,000 cell dataset
-- [x] Train MobileNetV2 classifier
-- [x] Achieve ~72% accuracy
-- [x] Generate evaluation figures
-
-### 🚧 Phase 2 (In Progress)
-- [ ] Scale to full dataset (20,000+ cells)
-- [ ] Switch to DenseNet121 architecture
-- [ ] Train with GPU acceleration
-- [ ] Test on clinical isolates (EC1-EC6)
-- [ ] Target: 80-84% accuracy
-
-### 🔮 Phase 3 (Future)
-- [ ] Implement dose-response curves
-- [ ] Add remaining antibiotics (Gentamicin, Rifampicin, Co-amoxiclav)
-- [ ] Develop web interface for predictions
-- [ ] Real-time inference optimization
 
 ## 📝 Methodology
 
@@ -96,7 +74,7 @@ def extract_cell(dapi_stack, nile_red_stack, mask):
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please:
+Contributions are welcome! 
 
 
 
