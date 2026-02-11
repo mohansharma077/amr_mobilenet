@@ -27,21 +27,6 @@ This project uses the **DASP (Deep Antimicrobial Susceptibility Phenotyping)** d
 
 > **Note:** Dataset not included in repository due to size. Contact  for access.
 
-## 🚀 Quick Start
-
-### Installation
-```bash
-# Clone repository
-git clone https://github.com/mohansharma077/amr_mobilenet.git
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
 
 
 
