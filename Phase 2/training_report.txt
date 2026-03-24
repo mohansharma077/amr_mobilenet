@@ -1,0 +1,64 @@
+
+COMPLETE TRAINING REPORT
+======================================================================
+
+DATASET
+----------------------------------------------------------------------
+Total cells extracted: 30000
+Training: 21000 (10500 resistant, 10500 susceptible)
+Validation: 4500 (2250 resistant, 2250 susceptible)
+Test: 4500 (2250 resistant, 2250 susceptible)
+
+MOBILENETV2 RESULTS
+----------------------------------------------------------------------
+Test Accuracy: 83.67%
+Precision: 0.8367
+Recall: 0.8367
+AUC: 0.9255
+Loss: 0.3633
+
+Per-class:
+  Resistant:   Precision=0.858, Recall=0.807, F1=0.832
+  Susceptible: Precision=0.818, Recall=0.866, F1=0.841
+
+DENSENET121 RESULTS
+----------------------------------------------------------------------
+Test Accuracy: 90.27%
+Precision: 0.9027
+Recall: 0.9027
+AUC: 0.9674
+Loss: 0.2354
+
+Per-class:
+  Resistant:   Precision=0.888, Recall=0.922, F1=0.904
+  Susceptible: Precision=0.919, Recall=0.884, F1=0.901
+
+COMPARISON TO BASELINE PAPER
+----------------------------------------------------------------------
+Paper (Zagajewski et al. 2023): 84% accuracy
+MobileNetV2: 83.67%
+DenseNet121: 90.27%
+
+FILES GENERATED
+----------------------------------------------------------------------
+Models:
+  - mobilenet_best.h5
+  - mobilenet_final.h5
+  - densenet_best.h5
+  - densenet_final.h5
+
+Data:
+  - full_dataset_30k.npz
+  - predictions_mobilenet.npz
+  - predictions_densenet.npz
+  - history_mobilenet.csv
+  - history_densenet.csv
+  - model_comparison.csv
+
+Figures:
+  - confusion_matrices.png
+  - training_comparison.png
+
+======================================================================
+TRAINING COMPLETE
+======================================================================

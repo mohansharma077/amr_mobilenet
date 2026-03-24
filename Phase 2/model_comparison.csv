@@ -1,0 +1,6 @@
+Metric,MobileNetV2,DenseNet121
+Accuracy,83.67%,90.27%
+Precision,0.8367,0.9027
+Recall,0.8367,0.9027
+AUC,0.9255,0.9674
+Loss,0.3633,0.2354
